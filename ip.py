@@ -7,8 +7,10 @@ def main():
 
 
 def validate(ip):
-    if len(n) == 4:
-        if matches := re.search(r"^([0-9]| [1-9][0-9]| 1[0-9][0-9] | 2[0-4][0-9]| 25[0-5])):
+    parts = ip.split(".")
+    if len(parts) != 4:
+        return False
+    if matches := re.search(r"^([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]){4}"):
 
 
 
